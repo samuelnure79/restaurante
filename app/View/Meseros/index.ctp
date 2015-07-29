@@ -2,6 +2,10 @@
 <?php
     echo $this->Html->link('Crear Mesero',array('controller'=>'meseros','action'=>'nuevo'));
 ?>
+<br />
+<?php
+    echo $this->Html->link('Crear Mesa',array('controller'=>'mesas','action'=>'nuevo'));
+?>
 <table>
     <tr>
         <td>Id</td>

@@ -1,6 +1,9 @@
 <?php
     class Mesero extends AppModel
     {
+        public $virtualFields = array('nombre_completo'=>'CONCAT(Mesero.nombre, " ", Mesero.apellido)');
+        
+        
         public $validate = array('dni'=>array('notblank'=>array('rule'=>'notBlank'),
                                               'numeric'=>array('rule'=>'numeric', 'message'=>'Solo Numeros'),
                                               'unique'=>array('rule'=>'isUnique', 'message'=>'DNI existente!! Cambielo!!')), 
